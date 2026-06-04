@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ツイタラ 使い方ガイド | Doster Studio</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    color: #333;
+    background: #fafafa;
+  }
+  h1 {
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 8px;
+    font-size: 1.8em;
+  }
+  h2 {
+    color: #1976d2;
+    margin-top: 48px;
+    padding-left: 12px;
+    border-left: 4px solid #1976d2;
+  }
+  h2.important {
+    color: #c62828;
+    border-left-color: #c62828;
+  }
+  h3 {
+    color: #333;
+    margin-top: 28px;
+    font-size: 1.1em;
+  }
+  .meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+  a {
+    color: #1976d2;
+  }
+  .lead {
+    background: #e3f2fd;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 20px 0 32px;
+  }
+  .screenshot {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .screenshot img {
+    max-width: 320px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .caption {
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+  .step {
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 16px 0;
+    border-left: 3px solid #2196f3;
+  }
+  .step.important {
+    border-left-color: #c62828;
+    background: #ffebee;
+  }
+  .tip {
+    background: #fff8e1;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #ffa000;
+    font-size: 0.95em;
+  }
+  .tip::before {
+    content: "💡 ";
+  }
+  .warning {
+    background: #ffebee;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #c62828;
+    font-size: 0.95em;
+  }
+  .warning::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+  .toc {
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin: 24px 0;
+    border: 1px solid #e0e0e0;
+  }
+  .toc ol {
+    margin: 8px 0;
+    padding-left: 1.4em;
+  }
+  .toc li {
+    margin: 4px 0;
+  }
+  .contact {
+    background: #e8f5e9;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .contact a {
+    color: #1b5e20;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    font-size: 0.85em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>ツイタラ 使い方ガイド</h1>
+<p class="meta">最終更新: 2026-06-03 / Doster Studio</p>
+
+<div class="lead">
+  <strong>ツイタラ</strong>は、登録した場所に着くと自動で Todo を表示してくれる、場所連動型のリマインダーアプリです。スーパー、駅、会社、訪問先など、よく行く場所に「やるべきこと」を結び付けておけば、現地に着いた瞬間に思い出せます。
+</div>
+
+<div class="toc">
+  <strong>目次</strong>
+  <ol>
+    <li><a href="#about">ツイタラとは</a></li>
+    <li><a href="#initial-setup">最初に行う設定（位置情報の許可）</a></li>
+    <li><a href="#register">場所を登録する</a></li>
+    <li><a href="#todo">Todo を追加する</a></li>
+    <li><a href="#arrival">到着通知を受け取る</a></li>
+    <li><a href="#home-screen-ops">ホーム画面の操作</a></li>
+    <li><a href="#settings">基本設定</a></li>
+    <li><a href="#template">定番 Todo（テンプレート）</a></li>
+    <li><a href="#contact">お問い合わせ・フィードバック</a></li>
+  </ol>
+</div>
+
+<h2 id="about">1. ツイタラとは</h2>
+
+<p>ホーム画面には、登録した場所がカード形式で並びます。各カードには場所名と、その場所に紐付けた Todo の数が表示されます。</p>
+
+<div class="screenshot">
+  <img src="images/01_home.png" alt="ツイタラ ホーム画面">
+  <div class="caption">ホーム画面：登録した場所が一覧で表示されます</div>
+</div>
+
+<div class="tip">
+  ツイタラはバックグラウンドで動作するため、アプリを閉じていても登録した場所に近づくと自動で通知が届きます。
+</div>
+
+<h2 id="initial-setup" class="important">2. 最初に行う設定（位置情報の許可）</h2>
+
+<div class="warning">
+  ツイタラを正しく動作させるには、位置情報の許可を <strong>「常に許可」</strong> に設定する必要があります。インストール直後に必ず行ってください。
+</div>
+
+<h3>Step 1: 初回起動時のダイアログで「正確な位置 + アプリの使用時のみ」を選択</h3>
+
+<p>ツイタラを初めて起動すると、位置情報の許可を求めるダイアログが表示されます。</p>
+
+<div class="screenshot">
+  <img src="images/02_permission_dialog.png" alt="初回起動時の権限ダイアログ">
+  <div class="caption">初回起動時の位置情報許可ダイアログ</div>
+</div>
+
+<div class="step important">
+  <h3>このダイアログでの選択（2 段階）</h3>
+  <ol>
+    <li>上部の地図画像で <strong>「正確な位置」</strong> を選択（左側、青いピン付きの地図）<br>
+      <span style="color: #666; font-size: 0.9em;">※「おおよその位置」では数百m〜数 km の誤差が出るため、ツイタラの到着検知が正しく動作しません</span></li>
+    <li>下部のボタンで <strong>「アプリの使用時のみ」</strong> をタップ<br>
+      <span style="color: #666; font-size: 0.9em;">※「今回のみ」「許可しない」では位置情報が継続的に取得できません</span></li>
+  </ol>
+</div>
+
+<div class="tip">
+  Android のセキュリティ仕様により、この初回ダイアログでは「常に許可」を直接選べません。まず「アプリの使用時のみ」を選び、次の Step 2 で「常に許可」に切り替えます。
+</div>
+
+<h3>Step 2: 設定アプリで「常に許可」に切り替える</h3>
+
+<p>「アプリの使用中のみ許可」だけだと、アプリを閉じている間は位置検知が動作しません。以下の手順で「常に許可」に変更してください。</p>
+
+<div class="step important">
+  <h3>切り替え手順</h3>
+  <ol>
+    <li>Android の「<strong>設定</strong>」アプリを開く</li>
+    <li>「<strong>アプリ</strong>」をタップ</li>
+    <li>アプリ一覧から「<strong>ツイタラ</strong>」を選択</li>
+    <li>「<strong>権限</strong>」をタップ</li>
+    <li>「<strong>位置情報</strong>」をタップ</li>
+    <li><strong>「常に許可」</strong> を選択</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/03_permission_always.png" alt="位置情報の許可設定画面">
+  <div class="caption">「常に許可」を選択した状態</div>
+</div>
+
+<h3>なぜ「常に許可」が必要？</h3>
+
+<p>ツイタラはアプリを閉じている間も場所への接近を検知する設計です。「アプリの使用中のみ許可」だと、画面を消した瞬間に位置検知が停止してしまい、到着通知が届きません。</p>
+
+<div class="tip">
+  位置情報は端末内でのみ処理され、外部に送信されることはありません。詳細は<a href="../privacy/">プライバシーポリシー</a>をご確認ください。
+</div>
+
+<h3>通知の許可も忘れずに</h3>
+
+<p>初回起動時に通知の許可ダイアログも表示されることがあります。その場合 <strong>「許可」</strong> を選択してください。通知を許可しないと到着時にお知らせが届きません。</p>
+
+<h2 id="register">3. 場所を登録する</h2>
+
+<p>場所を登録する方法は 2 種類あります：</p>
+
+<ul>
+  <li><strong>A. Google マップから共有する</strong>（Google マップで検索した場所をワンタップで登録 / おすすめ）</li>
+  <li><strong>B. ツイタラから登録する</strong>（ホーム画面の「+」ボタン）</li>
+</ul>
+
+<div class="tip">
+  <strong>おすすめは A（Google マップから共有）</strong>です。地図上で場所を確認しながら登録できるので、どこを登録しているかが視覚的に分かりやすく、住所や座標も自動入力されるため入力ミスがありません。
+</div>
+
+<h3>A. Google マップから共有して登録する</h3>
+
+<p>Google マップで検索した場所を、ツイタラに直接共有して登録できます。住所や座標を手入力する必要がないため、もっとも手早く登録できる方法です。地図上で場所を確認できるので、どこを登録しているかイメージしやすいというメリットもあります。</p>
+
+<div class="step">
+  <h3>共有から登録する手順</h3>
+  <ol>
+    <li><strong>Google マップ</strong>で登録したい場所を検索</li>
+    <li>場所の詳細画面で「<strong>共有</strong>」ボタンをタップ</li>
+    <li>共有先の一覧から「<strong>ツイタラ</strong>」を選択</li>
+    <li>ツイタラが起動し、場所名・住所・座標が自動入力される</li>
+    <li>必要に応じてタグを追加し「保存」</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/05b_maps_share.png" alt="Google マップの共有ボタン">
+  <div class="caption">Google マップの場所詳細画面 → 「共有」ボタンをタップ</div>
+</div>
+
+<div class="screenshot">
+  <img src="images/05c_share_to_tsuitara.png" alt="共有先でツイタラを選択">
+  <div class="caption">共有先の一覧から「ツイタラ」を選択</div>
+</div>
+
+<div class="tip">
+  店舗名・施設名で検索した場所をそのまま登録できるので、住所が分からない場所（ファミレス、コンビニ等のチェーン店舗）も簡単に登録できます。
+</div>
+
+<h3>B. ツイタラから登録する</h3>
+
+<p>ホーム画面右下の「+」ボタンから、新しい場所を登録できます。Google マップを開かずに登録したい場合や、現在地・座標を直接指定したい場合はこちらが便利です。</p>
+
+<div class="screenshot">
+  <img src="images/03b_home_plus.png" alt="ホーム画面の「+」ボタン">
+  <div class="caption">ホーム画面右下の「+」ボタン（タップして場所を追加）</div>
+</div>
+
+<p>「+」ボタンをタップすると場所追加画面が開き、4 通りの方法で場所を登録できます：</p>
+
+<ul>
+  <li><strong>現在地から</strong>：今いる場所をワンタップで登録</li>
+  <li><strong>住所を入力</strong>：住所をテキストで入力して登録（主要な施設名・駅名なども住所の代わりに入力できることが多いです。例：「東京駅」「○○病院」「店舗名 〇〇店」等）</li>
+  <li><strong>マップから</strong>：Google マップで該当場所の URL をコピーしてからボタンをタップ（クリップボードから座標を自動取得）</li>
+  <li><strong>座標を直接入力</strong>：緯度・経度を直接指定</li>
+</ul>
+
+<div class="screenshot">
+  <img src="images/04_add_location.png" alt="場所追加画面">
+  <div class="caption">「+」ボタン → 場所追加画面（4 通りの登録方法）</div>
+</div>
+
+<div class="step">
+  <h3>登録の手順</h3>
+  <ol>
+    <li>ホーム画面右下の「+」ボタンをタップ</li>
+    <li>登録方法を選択（おすすめ：現在地 or マップから）</li>
+    <li>場所の名前を入力（例：「自宅」「会社」「スーパー」）</li>
+    <li>必要に応じてタグ（例：#買い物、#訪問先）を追加</li>
+    <li>「保存」ボタンで完了</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/05_location_saved.png" alt="場所登録完了">
+  <div class="caption">登録した場所がホーム画面に追加されます</div>
+</div>
+
+<h3>登録した場所を確認する（重要）</h3>
+
+<p>登録後は、実際に正しい場所が登録されているか確認することをおすすめします。特に住所や場所の名称から登録した場合、座標が意図したものとずれることがあります。ツイタラの到着検知は登録座標を基準に動作するため、ずれていると通知が来ない／違う場所で通知が来る原因になります。</p>
+
+<div class="step">
+  <h3>確認手順</h3>
+  <ol>
+    <li>ホーム画面で登録した場所のカードをタップ → 詳細画面が開く</li>
+    <li>右上の編集アイコン（鉛筆マーク）をタップ → 編集画面が開く</li>
+    <li>「<strong>📍 地図で確認する</strong>」ボタンをタップ → Google マップが起動し、登録座標にピンが立つ</li>
+    <li>意図した場所と一致しているか視覚的に確認</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/05d_verify_button.png" alt="編集画面の「地図で確認する」ボタン">
+  <div class="caption">編集画面の「📍 地図で確認する」ボタン（タップで Google マップが起動）</div>
+</div>
+
+<div class="tip">
+  違う場所が表示された場合は、編集画面で住所を修正するか、A の「Google マップから共有」で登録し直してください。Google マップから共有する方法は座標の精度が比較的高く、再登録の際もおすすめです。
+</div>
+
+<h2 id="todo">4. Todo を追加する</h2>
+
+<p>登録した場所をホーム画面でタップすると、詳細画面が開きます。ここで Todo を追加していきます。</p>
+
+<div class="screenshot">
+  <img src="images/06_todo_add.png" alt="Todo追加画面">
+  <div class="caption">場所の詳細画面で Todo を追加</div>
+</div>
+
+<div class="step">
+  <h3>Todo の種類</h3>
+  <ul>
+    <li><strong>通常 Todo</strong>：その場所に着いたら表示される基本的なリマインダー</li>
+    <li><strong>時刻指定 Todo</strong>：指定した時刻以降に到着した時のみ表示</li>
+    <li><strong>定期 Todo</strong>：毎週・毎月など、繰り返し設定可能</li>
+    <li><strong>定番 Todo（テンプレート）</strong>：よく使う Todo をテンプレートから呼び出し</li>
+  </ul>
+</div>
+
+<div class="screenshot">
+  <img src="images/07_todo_list.png" alt="Todo一覧">
+  <div class="caption">複数の Todo を登録した状態</div>
+</div>
+
+<h2 id="arrival">5. 到着通知を受け取る</h2>
+
+<p>登録した場所に近づくと、設定した距離（デフォルト 100m）以内で自動的に通知が届きます。アプリを起動していなくても動作します。</p>
+
+<div class="screenshot">
+  <img src="images/08_arrival_notification.png" alt="到着通知">
+  <div class="caption">通知バーに表示される到着通知</div>
+</div>
+
+<p>通知をタップすると、その場所に登録した Todo の一覧が全画面で表示されます。ロック画面でも表示されるので、すぐに内容を確認できます。</p>
+
+<div class="screenshot">
+  <img src="images/09_arrival_fullscreen.png" alt="全画面到着画面">
+  <div class="caption">ロック画面では全画面で Todo リストを表示</div>
+</div>
+
+<div class="tip">
+  到着通知が届かない場合は、位置情報の許可が「常に許可」になっているか、設定画面の「通知の自動起動」診断カードで確認してください。
+</div>
+
+<h2 id="home-screen-ops">6. ホーム画面の操作</h2>
+
+<h3>場所の並び替え</h3>
+
+<p>登録した場所が増えてきたら、ホーム画面上部の <strong>ソートアイコン（≡）</strong> をタップして並び順を変更できます。5 種類のソート方法が選べます。</p>
+
+<ul>
+  <li><strong>登録順</strong>：場所を登録した順（デフォルト）</li>
+  <li><strong>名前順</strong>：場所名のあいうえお順</li>
+  <li><strong>距離順</strong>：現在地から近い順</li>
+  <li><strong>Todo件数順</strong>：未完了 Todo が多い順</li>
+  <li><strong>更新日時順</strong>：最近編集した順</li>
+</ul>
+
+<div class="screenshot">
+  <img src="images/01b_sort.png" alt="ソート選択メニュー">
+  <div class="caption">ソートアイコン（≡）をタップして並び順を選択（選択中の項目にチェックが付きます）</div>
+</div>
+
+<div class="tip">
+  選択したソート順はアプリを閉じても保持されます。訪問先を巡回する場合は「距離順」、最近触った場所を上に出したい場合は「更新日時順」が便利です。
+</div>
+
+<h3>位置情報検知の ON / OFF</h3>
+
+<p>ホーム画面右上の <strong>位置情報アイコン（<img src="images/icon_location.png" alt="位置情報アイコン" style="height: 1.2em; vertical-align: middle;">）</strong> をタップすると、位置情報検知サービスを手動で ON/OFF できます。一時的に通知を止めたい場合（旅行中で別エリアにいる、休日で通知を止めたい等）に便利です。</p>
+
+<div class="warning">
+  手動 OFF <img src="images/icon_location_off.png" alt="位置情報OFFアイコン" style="height: 1.2em; vertical-align: middle;"> になっている間は、登録場所に近づいても通知は来ません。
+</div>
+
+<h2 id="settings">7. 基本設定</h2>
+
+<p>ホーム画面の歯車アイコンから設定画面を開きます。</p>
+
+<div class="screenshot">
+  <img src="images/10_settings.png" alt="設定画面">
+  <div class="caption">設定画面トップ</div>
+</div>
+
+<h3>時間帯を指定する</h3>
+
+<p>業務時間中だけ動作させたい等、特定の時間帯だけ位置検知を有効にできます。</p>
+
+<div class="screenshot">
+  <img src="images/12_schedule.png" alt="時間帯指定">
+  <div class="caption">時間帯指定：9:00〜18:00 の例</div>
+</div>
+
+<div class="step">
+  <h3>使い方</h3>
+  <ol>
+    <li>設定画面で「時間帯を指定する」をオン</li>
+    <li>開始時刻と終了時刻を設定</li>
+    <li>指定時間外は位置検知が自動で停止し、バッテリーを節約</li>
+  </ol>
+</div>
+
+<h3>到着通知距離を指定する</h3>
+
+<p>登録した場所から何メートル以内で「到着」とみなすかを設定できます。50m〜500m の範囲で調整可能です。</p>
+
+<div class="screenshot">
+  <img src="images/11_distance.png" alt="到着距離設定">
+  <div class="caption">到着距離は 50m〜500m で調整可能</div>
+</div>
+
+<div class="tip">
+  狭い範囲（50m）にすると正確に近づいた時だけ通知、広い範囲（500m）にすると早めに通知が届きます。用途に応じて調整してください。
+</div>
+
+<h2 id="template">8. 定番 Todo（テンプレート）</h2>
+
+<p>「ゴミ出し」「水やり」など、よく使う Todo はテンプレートとして保存できます。Todo 追加時に「定番」ボタンから呼び出せます。</p>
+
+<div class="step">
+  <h3>テンプレートの活用例</h3>
+  <ul>
+    <li>スーパー → 「牛乳を買う」「卵を買う」</li>
+    <li>会社 → 「PC を起動する」「メールチェック」</li>
+    <li>訪問先 → 「名刺交換」「資料を渡す」</li>
+  </ul>
+</div>
+
+<h2 id="contact">9. お問い合わせ・フィードバック</h2>
+
+<p>ツイタラをご利用いただきありがとうございます。気になった点・不具合・改善要望などありましたら、お気軽にお問い合わせください。</p>
+
+<div class="contact">
+  <p><strong>サポートメール</strong></p>
+  <p><a href="mailto:support.doster@gmail.com">support.doster@gmail.com</a></p>
+  <p style="margin-top: 16px; font-size: 0.9em; color: #555;">
+    テスター向けの追加情報は、別途お送りしたメールをご確認ください。
+  </p>
+</div>
+
+<footer>
+  <p>ツイタラ 使い方ガイド © 2026 Doster Studio</p>
+  <p><a href="../privacy/">プライバシーポリシー</a></p>
+</footer>
+
+</body>
+</html>
