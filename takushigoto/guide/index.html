@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>託し事 使い方ガイド | Doster Studio</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    color: #333;
+    background: #faf9f6;
+  }
+  h1 {
+    border-bottom: 2px solid #37564a;
+    padding-bottom: 8px;
+    font-size: 1.8em;
+  }
+  h2 {
+    color: #2f4a40;
+    margin-top: 48px;
+    padding-left: 12px;
+    border-left: 4px solid #37564a;
+  }
+  h2.important {
+    color: #c62828;
+    border-left-color: #c62828;
+  }
+  h2.family {
+    color: #7a5c1e;
+    border-left-color: #a8842c;
+  }
+  h3 {
+    color: #333;
+    margin-top: 28px;
+    font-size: 1.1em;
+  }
+  .meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+  a {
+    color: #2f4a40;
+  }
+  .lead {
+    background: #eef2f0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 20px 0 32px;
+  }
+  .screenshot {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .screenshot img {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .caption {
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+  .step {
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 16px 0;
+    border-left: 3px solid #37564a;
+  }
+  .step.important {
+    border-left-color: #c62828;
+    background: #ffebee;
+  }
+  .tip {
+    background: #faf6ec;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #a8842c;
+    font-size: 0.95em;
+  }
+  .tip::before {
+    content: "💡 ";
+  }
+  .warning {
+    background: #ffebee;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #c62828;
+    font-size: 0.95em;
+  }
+  .warning::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+  .toc {
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin: 24px 0;
+    border: 1px solid #e0e0e0;
+  }
+  .toc ol {
+    margin: 8px 0;
+    padding-left: 1.4em;
+  }
+  .toc li {
+    margin: 4px 0;
+  }
+  .toc .part {
+    font-weight: bold;
+    color: #2f4a40;
+    margin-top: 8px;
+  }
+  .family-banner {
+    background: #f3eee2;
+    border: 1px solid #d8c9a8;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 32px 0;
+  }
+  .family-banner::before {
+    content: "🖨 ";
+  }
+  .contact {
+    background: #f0ebe2;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .contact a {
+    color: #5a4a2a;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    font-size: 0.85em;
+    text-align: center;
+  }
+  @media print {
+    body { background: #fff; }
+    .toc, .tip { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>託し事（たくしごと） 使い方ガイド</h1>
+<p class="meta">最終更新: 2026-06-22 / Doster Studio</p>
+
+<div class="lead">
+  <strong>託し事</strong>は、あなたが亡くなった後にご家族がこのスマートフォンを起動したとき、あなたが残したメッセージや終活情報を自動的に表示するアプリです。毎日の「今日のひとこと」をタップして元気でいることを伝え、もし確認が一定期間とれなくなったら、残された大切な人へ託したいことを届けます。<strong>登録した内容は、この端末だけに保存されます。</strong>
+</div>
+
+<div class="toc">
+  <strong>目次</strong>
+  <div class="part">第1部 ご本人（持ち主）向け</div>
+  <ol>
+    <li><a href="#about">託し事とは（仕組み）</a></li>
+    <li><a href="#setup">最初の設定</a></li>
+    <li><a href="#register">託す内容を登録する</a></li>
+    <li><a href="#daily">毎日の生存確認</a></li>
+    <li><a href="#settings">各種設定・動作確認</a></li>
+    <li><a href="#backup">バックアップ・機種変更・有料版</a></li>
+  </ol>
+  <div class="part">第2部 残された大切な人へ（印刷して残せます）</div>
+  <ol start="7">
+    <li><a href="#family">メッセージの受け取り方</a></li>
+    <li><a href="#faq">よくある質問・お問い合わせ</a></li>
+  </ol>
+</div>
+
+<h2 id="about">1. 託し事とは（仕組み）</h2>
+
+<p>託し事は「デジタルのエンディングノート」です。銀行口座や保険などの大切な情報、そして残された大切な人へのメッセージを書き留めておくと、万が一のときにその内容が届きます。</p>
+
+<div class="step">
+  <h3>3つのステップで動きます</h3>
+  <ol>
+    <li><strong>書き留める</strong>：メッセージや資産・契約の情報を登録しておきます。</li>
+    <li><strong>毎日タップして元気でいることを伝える</strong>：毎日届く「今日のひとこと」通知の「✅ 確認」をタップすると、その日あなたが元気でいることが記録されます。</li>
+    <li><strong>届ける</strong>：設定した日数（初期設定は3日）この確認がとれなくなると、アプリが自動で切り替わり、ご家族がこの端末を開いたときに、あなたが残した内容を表示します。</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/01_home.png" alt="託し事 ホーム画面">
+  <div class="caption">ホーム画面：上部に稼働状況、下にカテゴリ一覧が並びます</div>
+</div>
+
+<div class="tip">
+  情報はこの端末だけに保存されるため、登録した内容が開発者や第三者に送られることはありません。開発者がその内容を見ることもできません。詳しくは<a href="../privacy/">プライバシーポリシー</a>をご覧ください。
+</div>
+
+<h2 id="setup">2. 最初の設定</h2>
+
+<p>アプリを初めて起動すると、5つのステップで初期設定を行います。</p>
+
+<div class="step">
+  <h3>設定の5ステップ</h3>
+  <ol>
+    <li><strong>ようこそ</strong>：仕組みの説明です。前のスマホから引き継ぐ場合は、ここでバックアップファイル（JSON）を読み込めます（→ 第6章）。</li>
+    <li><strong>お名前の登録</strong>：あなたの氏名と、そのローマ字表記を登録します（下記）。</li>
+    <li><strong>届けるまでの日数</strong>：何日間、確認がとれなければ家族へ届けるかを選びます（毎日／2〜10日。標準は3日）。</li>
+    <li><strong>表示するコンテンツ</strong>：毎日の通知に出す「今日のひとこと」のジャンルを選びます（偉人の名言・季節の言葉・俳句など、複数選択可）。</li>
+    <li><strong>通知とアラームの許可</strong>：通知と「正確なアラーム」の許可を行います。これが無いと生存確認も配信も動きません。</li>
+  </ol>
+</div>
+
+<div class="step important">
+  <h3>お名前は「氏名」と「ローマ字」の両方を登録します</h3>
+  <p>ご家族がメッセージを開くときに、この氏名を入力して認証します（名前を知っている方だけが読める仕組み）。</p>
+  <p><strong>ローマ字の氏名も必須です。</strong>スマートフォンは電源を入れ直した直後や電池切れからの復帰後（ロック解除前）は日本語入力ができないことがあります。その状態でもご家族が確実に開けるよう、ローマ字も登録します（「shi / si」「tarou / taro」などの表記ゆれは自動で吸収されます）。</p>
+</div>
+
+<div class="tip">
+  これらの設定は、あとから設定画面でいつでも変更できます。
+</div>
+
+<h2 id="register">3. 託す内容を登録する</h2>
+
+<p>ホーム画面のカテゴリをタップし、右下の「＋」ボタンから内容を登録します。次の14カテゴリに分けて残せます。</p>
+
+<div class="step">
+  <h3>登録できるカテゴリ</h3>
+  <ul>
+    <li>大切な人へのメッセージ</li>
+    <li>銀行口座 ／ 証券・投資 ／ 不動産 ／ 保険 ／ 借入金・ローン</li>
+    <li>サブスク（定期支払い）・契約 ／ デジタル資産（暗号資産・電子マネー等）</li>
+    <li>SNS・メールアカウント ／ 重要書類の保管場所</li>
+    <li>葬儀の希望 ／ 連絡してほしい人 ／ ペット ／ その他</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>無料版とプレミアム版の違い（登録できる内容）</h3>
+  <p>無料版とプレミアム版では、<strong>登録できる内容の量が大きく変わります</strong>。</p>
+  <ul>
+    <li><strong>無料版</strong>：上記のうち「<strong>大切な人へのメッセージ</strong>」を<strong>1件だけ</strong>登録できます（タイトル10文字・本文50文字まで）。まずはこの1件で、生存確認から残された大切な人への配信までの流れを体験できます。銀行口座や保険などの資産カテゴリは、ロックされていて登録できません。</li>
+    <li><strong>プレミアム版（¥1,500 買い切り）</strong>：<strong>14カテゴリすべてに、件数無制限・文字数無制限</strong>で登録できます。銀行・証券・保険・不動産といった資産情報や、複数の方へのメッセージを残せるのはプレミアム版です。月額料金はなく、一度の購入でずっと使えます。</li>
+  </ul>
+  <p>つまり「本格的にエンディングノートとして使う」にはプレミアム版をおすすめします（料金・購入方法は<a href="#backup">第6章</a>を参照）。</p>
+</div>
+
+<div class="screenshot">
+  <img src="images/02_message.png" alt="登録したメッセージの表示">
+  <div class="caption">「大切な人へのメッセージ」を登録した例</div>
+</div>
+
+<div class="step important">
+  <h3>暗証番号・パスワードは書かないでください</h3>
+  <p>託し事は「資産や契約が<strong>どこに、どんな形であるか</strong>」をご家族に伝えるためのアプリです。銀行・証券・各種サービスの<strong>暗証番号やログインパスワード、クレジットカードの暗証番号など、それ単体で不正利用できる情報は入力しないでください</strong>。</p>
+  <p>このアプリでの認証方法は「持ち主の名前」の入力という簡単な方法です。そのため入力された情報は、端末の紛失・盗難の際や、書き出したファイル（PDF・引き継ぎ用データ）の管理を誤った際に、第三者の目に触れるおそれがあります。また暗証番号やログインパスワード、クレジットカードの暗証番号などは通常の相続手続きには必要ありません。「通帳は仏壇の引き出し」「証券はSBI証券」のように、<strong>在り処だけ</strong>を書くのが安全で確実な使い方です。</p>
+</div>
+
+<div class="tip">
+  各カテゴリの入力欄には、書き方の例（プレースホルダー）が表示されます。迷ったら参考にしてください。
+</div>
+
+<h2 id="daily">4. 毎日の生存確認</h2>
+
+<p>託し事の心臓部です。<strong>毎日届く「今日のひとこと」通知の「✅ 確認」をタップする</strong>ことで、あなたが元気でいることが記録されます。</p>
+
+<div class="step">
+  <h3>毎日の流れ</h3>
+  <ol>
+    <li>設定した時刻（初期は20:00）に「今日のひとこと」が通知で届きます。</li>
+    <li>通知、またはロック画面に出るカード（アプリ名と名言が表示されます）の「✅ 確認」をタップします。</li>
+    <li>その日の生存が記録され、ホーム画面の「確認未応答回数」が0に戻ります。</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/02b_daily_notification.png" alt="生存確認通知">
+  <div class="caption">ロック画面に届くカード：その日のひとことと「✅ 確認」ボタンが表示されます</div>
+</div>
+
+<div class="warning">
+  この「✅ 確認」をタップしない日が、設定した日数だけ続くと、アプリは「持ち主にもしものことがあった」と判断し、残された大切な人への配信モードに切り替わります。<strong>旅行や入院などでしばらく確認できない予定があるときは、設定画面の「託し事からの通知」を一時的にオフにするか、判定日数を長めにしておくと安心です。</strong>
+</div>
+
+<p>ホーム画面の上部には「正常に稼働中」「確認未応答回数：◯ / ◯ 回」が表示され、あと何回で残された大切な人へ届く状態になるかが一目で分かります。</p>
+
+<h2 id="settings">5. 各種設定・動作確認</h2>
+
+<p>ホーム画面右上の歯車アイコンから設定画面を開きます。</p>
+
+<div class="screenshot">
+  <img src="images/03_settings.png" alt="設定画面">
+  <div class="caption">設定画面：通知のオンオフ・時刻・コンテンツ・判定日数などを変更できます</div>
+</div>
+
+<div class="step">
+  <h3>主な設定項目</h3>
+  <ul>
+    <li><strong>託し事からの通知</strong>：オフにすると生存確認の通知が止まります（長期の入院・旅行時などに）。</li>
+    <li><strong>確認通知の時刻</strong>：「今日のひとこと」が届く時刻。</li>
+    <li><strong>表示するコンテンツ</strong>：通知に出すジャンルの選択。</li>
+    <li><strong>託す内容を届けるまでの日数</strong>：何日の未確認で配信に切り替えるか。</li>
+    <li><strong>お名前・ローマ字</strong>：家族認証に使う氏名の変更。</li>
+  </ul>
+</div>
+
+<h3>動作確認（テストモード）</h3>
+
+<p>「本当に家族へ届くのか」を実際に体験して確かめられる機能です。テストモードをオンにすると<strong>1日＝5秒に短縮</strong>され、「生存確認 → 家族への配信 → メッセージ表示」の一連の流れを数十秒で確認できます。</p>
+
+<div class="tip">
+  テスト中に表示される配信画面には「🧪 テストモードを終了する」ボタンがあります。確認が済んだら、その場ですぐにテストモードを終了できます。
+</div>
+
+<h2 id="backup">6. バックアップ・機種変更・有料版</h2>
+
+<h3>データのバックアップと機種変更</h3>
+
+<p>設定画面の下部に、2種類の書き出し機能があります。</p>
+
+<div class="step">
+  <ul>
+    <li><strong>📦 データの引き継ぎ</strong>：設定・登録した内容をファイル（JSON）に書き出し、新しいスマホで読み込めます。機種変更のときに使います。</li>
+    <li><strong>📄 PDF エクスポート</strong>：登録した項目をPDFにまとめて書き出します。端末故障時のバックアップや、紙で残しておく用途に。</li>
+  </ul>
+</div>
+
+<div class="warning">
+  書き出したファイル（PDF・引き継ぎ用データ）には、登録した内容がそのまま記録されており、暗号化はされていません。メールへの添付や、共有のクラウド・他の人が見られる場所への保存は避け、保存先の管理に十分ご注意ください。不要になったファイルは削除することをおすすめします。
+</div>
+
+<div class="tip">
+  お使いの端末でAndroidの標準バックアップが有効な場合、データはご自身のGoogleアカウントのバックアップ領域にも自動保存されます（開発者はアクセスできません）。
+</div>
+
+<h3>無料版と有料版</h3>
+
+<div class="screenshot">
+  <img src="images/04_upgrade.png" alt="プレミアム案内画面">
+  <div class="caption">プレミアム案内画面</div>
+</div>
+
+<div class="step">
+  <ul>
+    <li><strong>無料</strong>：「大切な人へのメッセージ」を1件登録でき、生存確認から家族への配信まで一通り体験できます。</li>
+    <li><strong>プレミアム（¥1,500 買い切り）</strong>：全14カテゴリ・件数無制限・文字数無制限。一度の購入でずっと使えます（月額はありません）。</li>
+  </ul>
+</div>
+
+<div class="family-banner">
+  <strong>ここから先（第2部）は、ご家族向けの説明です。</strong><br>
+  このページをブラウザの印刷機能でPDF化・印刷し、ご家族に渡しておくこともできます。万が一のとき、ご家族がスムーズに受け取れるよう、生前にこの仕組みを共有しておくことをおすすめします。
+</div>
+
+<h2 id="family" class="family">7. 【残された大切な人へ】メッセージの受け取り方</h2>
+
+<p>このスマートフォンの持ち主から、あなたへ託された内容があります。落ち着いて、以下の手順でお受け取りください。<strong>特別な操作や、スマホのロック解除（暗証番号）は必要ありません。</strong></p>
+
+<div class="step">
+  <h3>受け取りの手順</h3>
+  <ol>
+    <li><strong>画面にメッセージのお知らせが表示されます。</strong><br>
+      この端末を操作すると、ロック画面に「✉️ 託されたメッセージ」というお知らせが表示されます。「<strong>開く</strong>」を押してください。</li>
+    <li><strong>持ち主のお名前を入力します。</strong><br>
+      「持ち主の確認」画面が出ます。この端末の持ち主（亡くなった方）のお名前を入力し、「確認する」を押してください。漢字でも、ローマ字でも構いません。</li>
+    <li><strong>託された内容が表示されます。</strong><br>
+      メッセージや、資産・契約・連絡してほしい方などの情報が一覧で表示されます。</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="images/05_family_auth.png" alt="持ち主の確認画面">
+  <div class="caption">手順2：持ち主のお名前を入力する画面</div>
+</div>
+
+<div class="screenshot">
+  <img src="images/06_family_name.png" alt="名前入力後">
+  <div class="caption">お名前を入力し「確認する」を押します</div>
+</div>
+
+<div class="screenshot">
+  <img src="images/07_family_message.png" alt="託されたメッセージの表示">
+  <div class="caption">手順3：託された内容が表示されます</div>
+</div>
+
+<div class="tip">
+  「閉じる」を押しても、翌日また自動でお知らせが表示されます。他のご家族がまだ見ていない場合に備え、すぐに止めたいとき以外は、そのままにしておいて構いません。
+</div>
+
+<div class="warning">
+  お名前は、その持ち主と親しいご家族なら必ずご存じの情報です。もし入力してもうまくいかない場合は、漢字とローマ字を切り替えて試してみてください。それでも開けないときは、下記サポートまでご連絡ください。
+</div>
+
+<h2 id="faq">8. よくある質問・お問い合わせ</h2>
+
+<h3>よくある質問</h3>
+
+<div class="step">
+  <h3>Q. インターネットに接続していなくても動きますか？</h3>
+  <p>A. はい。託し事はすべて端末内で動作し、通信を行いません。圏外でも生存確認・配信は機能します。</p>
+  <h3>Q. 登録した内容は開発者に見られますか？</h3>
+  <p>A. いいえ。データはこの端末だけに保存されるため、開発者を含む第三者が見ることはできません。</p>
+  <h3>Q. しばらくスマホを触れない予定があります。</h3>
+  <p>A. 設定画面で「託し事からの通知」を一時的にオフにするか、「届けるまでの日数」を長めに設定しておけば、誤って配信されることはありません。</p>
+  <h3>Q. 間違って配信モードになってしまいました。</h3>
+  <p>A. アプリを起動すると、ホーム画面の上部に「📨 現在『お届けモード』になっています」というカードが表示されます。その中の「<strong>私は生きています（通常モードに戻す）</strong>」ボタンをタップすれば、通常モードに戻ります。</p>
+</div>
+
+<div class="contact">
+  <p><strong>サポートメール</strong></p>
+  <p><a href="mailto:support.doster@gmail.com">support.doster@gmail.com</a></p>
+  <p style="margin-top: 16px; font-size: 0.9em; color: #555;">
+    ご不明な点・不具合・ご要望など、お気軽にお問い合わせください。
+  </p>
+</div>
+
+<footer>
+  <p>託し事 使い方ガイド © 2026 Doster Studio</p>
+  <p><a href="../privacy/">プライバシーポリシー</a> ／ <a href="../tokushoho/">特定商取引法に基づく表記</a></p>
+</footer>
+
+</body>
+</html>
