@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ツイタラ 使い方ガイド | Doster Studio</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    color: #333;
+    background: #fafafa;
+  }
+  h1 {
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 8px;
+    font-size: 1.8em;
+  }
+  h2 {
+    color: #1976d2;
+    margin-top: 48px;
+    padding-left: 12px;
+    border-left: 4px solid #1976d2;
+  }
+  h2.important {
+    color: #c62828;
+    border-left-color: #c62828;
+  }
+  h3 {
+    color: #333;
+    margin-top: 28px;
+    font-size: 1.1em;
+  }
+  .meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+  a {
+    color: #1976d2;
+  }
+  .lead {
+    background: #e3f2fd;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 20px 0 32px;
+  }
+  .screenshot {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .screenshot img {
+    max-width: 320px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .caption {
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+  .step {
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 16px 0;
+    border-left: 3px solid #2196f3;
+  }
+  .step.important {
+    border-left-color: #c62828;
+    background: #ffebee;
+  }
+  .tip {
+    background: #fff8e1;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #ffa000;
+    font-size: 0.95em;
+  }
+  .tip::before {
+    content: "💡 ";
+  }
+  .warning {
+    background: #ffebee;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    border-left: 3px solid #c62828;
+    font-size: 0.95em;
+  }
+  .warning::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+  .price-box {
+    background: #fff;
+    border: 2px solid #00acc1;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .price-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+  .price-box th, .price-box td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95em;
+  }
+  .price-box th {
+    color: #00838f;
+    width: 42%;
+    font-weight: bold;
+  }
+  .toc {
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin: 24px 0;
+    border: 1px solid #e0e0e0;
+  }
+  .toc ol {
+    margin: 8px 0;
+    padding-left: 1.4em;
+  }
+  .toc li {
+    margin: 4px 0;
+  }
+  .faq dt {
+    font-weight: bold;
+    margin-top: 18px;
+    color: #1976d2;
+  }
+  .faq dd {
+    margin: 6px 0 0 0;
+  }
+  .contact {
+    background: #e8f5e9;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .contact a {
+    color: #1b5e20;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #999;
+    font-size: 0.85em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>ツイタラ 使い方ガイド</h1>
+<p class="meta">最終更新: 2026-07-30 / Doster Studio</p>
+
+<div class="lead">
+  <strong>ツイタラ</strong>は、登録した場所に着くと自動で Todo を表示してくれる、場所連動型のリマインダーアプリです。スーパー、駅、会社、訪問先など、よく行く場所に「やるべきこと」を結び付けておけば、現地に着いた瞬間に思い出せます。
+</div>
+
+<div class="toc">
+  <strong>目次</strong>
+  <ol>
+    <li><a href="#about">ツイタラとは</a></li>
+    <li><a href="#price">料金について</a></li>
+    <li><a href="#initial-setup">最初に行う設定（権限の許可）</a></li>
+    <li><a href="#register">場所を登録する</a></li>
+    <li><a href="#todo">Todo を追加する</a></li>
+    <li><a href="#arrival">到着通知を受け取る</a></li>
+    <li><a href="#home-screen-ops">ホーム画面の操作</a></li>
+    <li><a href="#settings">基本設定</a></li>
+    <li><a href="#backup">データの引き継ぎ・バックアップ</a></li>
+    <li><a href="#troubleshoot">通知が来ないときは</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ol>
+</div>
+
+<h2 id="about">1. ツイタラとは</h2>
+
+<p>ホーム画面には、登録した場所がカード形式で並びます。各カードには場所名と、その場所に紐付けた Todo の数、現在地からの距離が表示されます。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/01_home.png" alt="ツイタラ ホーム画面">
+  <div class="caption">ホーム画面：登録した場所が一覧で表示されます</div>
+</div>
+
+<div class="tip">
+  ツイタラはバックグラウンドで動作するため、アプリを閉じていても登録した場所に近づくと自動で通知が届きます。
+</div>
+
+<h2 id="price">2. 料金について</h2>
+
+<p>ツイタラは<strong>無料でお試しいただけます</strong>。登録できる場所が 5 か所を超える場合のみ、買い切りでの解放が必要です。</p>
+
+<div class="price-box">
+  <strong>料金プラン</strong>
+  <table>
+    <tr>
+      <th>無料</th>
+      <td>場所を <strong>5 か所</strong> まで登録できます。機能の制限はありません（通知・Todo・タグ・定期 Todo などすべて使えます）。</td>
+    </tr>
+    <tr>
+      <th>すべての機能を使う<br>（買い切り）</th>
+      <td>場所を <strong>無制限</strong> に登録できます。<strong>一度お支払いいただくだけ</strong>で、月額料金や追加課金は一切ありません。</td>
+    </tr>
+  </table>
+</div>
+
+<p>価格はアプリ内の購入画面に表示されます。お支払いは Google Play を通じて行われ、当方がクレジットカード情報などを受け取ることはありません。</p>
+
+<h3>5 か所を超えて登録しようとしたとき</h3>
+
+<p>無料のまま 6 か所目を追加しようとすると、上限のお知らせが表示されます。<strong>すでに登録済みの場所は、そのまま通常どおり使えます</strong>（通知も Todo も制限されません）。追加ができなくなるだけです。</p>
+
+<div class="tip">
+  他の端末からデータを引き継いだ場合など、5 か所を超えるデータをお持ちの状態でも、既存の場所はすべてそのまま表示・通知されます。新しく追加したい場合に購入をご検討ください。
+</div>
+
+<h3>購入後の引き継ぎ（機種変更・再インストール）</h3>
+
+<p>購入は Google アカウントに紐付いて記録されます。<strong>同じ Google アカウントであれば、機種変更や再インストールをしても自動的に購入済みの状態に戻ります</strong>。追加でお支払いいただく必要はありません。</p>
+
+<div class="tip">
+  復元されない場合は、Play ストアにログインしているアカウントが購入時と同じかご確認ください。それでも解決しない場合はサポートまでご連絡ください。
+</div>
+
+<h2 id="initial-setup" class="important">3. 最初に行う設定（権限の許可）</h2>
+
+<div class="warning">
+  ツイタラを正しく動作させるには、位置情報を <strong>「常に許可」</strong> にする必要があります。初回起動時に順番にご案内しますので、画面の指示に沿って進めてください。
+</div>
+
+<p>初回起動時は、次の順番でダイアログが表示されます。</p>
+
+<div class="step important">
+  <h3>初回起動時の流れ</h3>
+  <ol>
+    <li><strong>通知の許可</strong> …「許可」をタップ<br>
+      <span style="color: #666; font-size: 0.9em;">※許可しないと到着時にお知らせが届きません</span></li>
+    <li><strong>位置情報の許可</strong> …「<strong>正確な位置</strong>」を選んだうえで「<strong>アプリの使用時のみ</strong>」をタップ<br>
+      <span style="color: #666; font-size: 0.9em;">※「おおよその位置」では数百m〜数kmの誤差が出るため、到着検知が正しく動作しません</span></li>
+    <li><strong>「位置情報の『常に許可』について」</strong> …ツイタラからの説明が表示されます。内容をご確認のうえ「<strong>続ける</strong>」をタップ</li>
+    <li><strong>位置情報の権限画面</strong>（Android の設定画面）…「<strong>常に許可</strong>」を選択して戻る</li>
+    <li><strong>「通知の自動起動について」</strong> …「設定を開く」から「<strong>アラームとリマインダー</strong>」をオンにする<br>
+      <span style="color: #666; font-size: 0.9em;">※時間帯指定や端末再起動後の自動再開に必要です。あとから設定画面でも変更できます</span></li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/02_permission_dialog.png" alt="位置情報の許可ダイアログ">
+  <div class="caption">位置情報の許可ダイアログ（「正確な位置」＋「アプリの使用時のみ」を選択）</div>
+</div>
+
+<div class="tip">
+  Android のセキュリティ仕様により、最初のダイアログでは「常に許可」を直接選べません。まず「アプリの使用時のみ」を選び、続いて表示される画面で「常に許可」に切り替える流れになります。
+</div>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/03_permission_always.png" alt="位置情報の許可設定画面">
+  <div class="caption">「常に許可」を選択した状態</div>
+</div>
+
+<h3>なぜ「常に許可」が必要？</h3>
+
+<p>ツイタラはアプリを閉じている間も場所への接近を検知する設計です。「アプリの使用中のみ許可」だと、画面を消した瞬間に位置検知が停止してしまい、到着通知が届きません。</p>
+
+<div class="tip">
+  位置情報は端末内でのみ処理され、当方（開発者）のサーバーや第三者に送信されることはありません。詳細は<a href="../../tsuitara/privacy/">プライバシーポリシー</a>をご確認ください。
+</div>
+
+<h3>あとから許可し直すこともできます</h3>
+
+<p>初回に「今はしない」を選んだ場合や、あとから設定を変えたい場合は、ホーム画面上部に表示される警告バナーをタップすると、該当する設定画面へ直接移動できます。</p>
+
+<h2 id="register">4. 場所を登録する</h2>
+
+<p>場所を登録する方法は 2 種類あります：</p>
+
+<ul>
+  <li><strong>A. Google マップから共有する</strong>（Google マップで検索した場所をワンタップで登録 / おすすめ）</li>
+  <li><strong>B. ツイタラから登録する</strong>（ホーム画面の「+」ボタン）</li>
+</ul>
+
+<div class="tip">
+  <strong>おすすめは A（Google マップから共有）</strong>です。地図上で場所を確認しながら登録できるので、どこを登録しているかが視覚的に分かりやすく、住所や座標も自動入力されるため入力ミスがありません。
+</div>
+
+<h3>A. Google マップから共有して登録する</h3>
+
+<div class="step">
+  <h3>共有から登録する手順</h3>
+  <ol>
+    <li><strong>Google マップ</strong>で登録したい場所を検索</li>
+    <li>場所の詳細画面で「<strong>共有</strong>」ボタンをタップ</li>
+    <li>共有先の一覧から「<strong>ツイタラ</strong>」を選択</li>
+    <li>ツイタラが起動し、場所名・住所・座標が自動入力される</li>
+    <li>必要に応じてタグを追加し「追加する」ボタンをタップ</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/05c_share_to_tsuitara.png" alt="共有先でツイタラを選択">
+  <div class="caption">共有先の一覧から「ツイタラ」を選択</div>
+</div>
+
+<div class="tip">
+  店舗名・施設名で検索した場所をそのまま登録できるので、住所が分からない場所（ファミレス、コンビニ等のチェーン店舗）も簡単に登録できます。
+</div>
+
+<h3>B. ツイタラから登録する</h3>
+
+<p>ホーム画面右下の「+」ボタンから、新しい場所を登録できます。4 通りの方法が選べます。</p>
+
+<ul>
+  <li><strong>現在地から</strong>：今いる場所をワンタップで登録</li>
+  <li><strong>住所を入力</strong>：住所をテキストで入力して登録（主要な施設名・駅名なども入力できることが多いです）</li>
+  <li><strong>マップから</strong>：Google マップで該当場所の URL をコピーしてからボタンをタップ（クリップボードから座標を自動取得）</li>
+  <li><strong>座標を直接入力</strong>：緯度・経度を直接指定</li>
+</ul>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/04_add_location.png" alt="場所追加画面">
+  <div class="caption">「+」ボタン → 場所追加画面（4 通りの登録方法）</div>
+</div>
+
+<h3>登録した場所を確認する（重要）</h3>
+
+<p>登録後は、実際に正しい場所が登録されているか確認することをおすすめします。特に住所や施設名から登録した場合、座標が意図したものとずれることがあります。到着検知は登録座標を基準に動作するため、ずれていると通知が来ない／違う場所で通知が来る原因になります。</p>
+
+<div class="step">
+  <h3>確認手順</h3>
+  <ol>
+    <li>ホーム画面で登録した場所のカードをタップ → 詳細画面が開く</li>
+    <li>右上の「編集」をタップ → 編集画面が開く</li>
+    <li>「<strong>📍 地図で確認する</strong>」ボタンをタップ → Google マップが起動し、登録座標にピンが立つ</li>
+    <li>意図した場所と一致しているか視覚的に確認</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/05d_verify_button.png" alt="編集画面の「地図で確認する」ボタン">
+  <div class="caption">編集画面の「📍 地図で確認する」ボタン</div>
+</div>
+
+<h2 id="todo">5. Todo を追加する</h2>
+
+<p>登録した場所をホーム画面でタップすると詳細画面が開きます。ここで Todo を追加します。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/06_todo_add.png" alt="Todo追加画面">
+  <div class="caption">場所の詳細画面で Todo を追加</div>
+</div>
+
+<div class="step">
+  <h3>Todo の種類</h3>
+  <ul>
+    <li><strong>通常 Todo</strong>：その場所に着いたら表示される基本のリマインダー</li>
+    <li><strong>時刻指定 Todo</strong>：指定した時刻以降に到着したときのみ表示</li>
+    <li><strong>定期 Todo</strong>：毎日・毎週・毎月・毎年の繰り返し設定が可能</li>
+    <li><strong>定番 Todo（テンプレート）</strong>：よく使う Todo をテンプレートとして保存し、「定番」ボタンから呼び出せます</li>
+  </ul>
+</div>
+
+<div class="tip">
+  定番 Todo の例：スーパー →「牛乳を買う」／会社 →「メールチェック」／訪問先 →「名刺交換」「資料を渡す」
+</div>
+
+<h2 id="arrival">6. 到着通知を受け取る</h2>
+
+<p>登録した場所に近づくと、設定した距離（初期値 100m）以内で自動的に通知が届きます。アプリを起動していなくても動作します。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/09_arrival_fullscreen.png" alt="全画面到着画面">
+  <div class="caption">ロック画面では全画面で Todo リストを表示</div>
+</div>
+
+<p>通知をタップすると、その場所に登録した Todo の一覧が表示されます。ロック中の画面にも表示されるので、すぐに内容を確認できます。</p>
+
+<h3>動作の仕組み（重要）</h3>
+
+<p>ツイタラはバッテリー消費を抑えるため、<strong>スマートフォンの動きをきっかけに位置情報を確認</strong>する設計です。加速度センサーで動きを検知し、動きがあったタイミングで登録場所への接近をチェックします。</p>
+
+<div class="warning">
+  スマホが完全に静止していると、時刻指定 Todo の時刻や時間帯指定の開始時刻になっても検知が動きません。ポケットやカバンに入れて持ち歩いているとき、手に持って歩いているときは通常どおり動作します。机に置きっぱなしの場合は、少し動かす（持ち上げる・移動する）と検知が再開します。
+</div>
+
+<h2 id="home-screen-ops">7. ホーム画面の操作</h2>
+
+<h3>場所の並び替え</h3>
+
+<p>ホーム画面上部の <strong>ソートアイコン（≡）</strong> をタップして、並び順を 5 種類から選べます。</p>
+
+<ul>
+  <li><strong>登録順</strong>：登録した順（初期値）</li>
+  <li><strong>名前順</strong>：場所名のあいうえお順</li>
+  <li><strong>距離順</strong>：現在地から近い順</li>
+  <li><strong>Todo件数順</strong>：未完了 Todo が多い順</li>
+  <li><strong>更新日時順</strong>：最近編集した順</li>
+</ul>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/01b_sort.png" alt="ソート選択メニュー">
+  <div class="caption">ソートアイコン（≡）をタップして並び順を選択</div>
+</div>
+
+<div class="tip">
+  選んだ並び順はアプリを閉じても保持されます。訪問先を回るときは「距離順」が便利です。
+</div>
+
+<h3>位置情報検知の ON / OFF</h3>
+
+<p>ホーム画面右上の <strong>位置情報アイコン（<img src="../../tsuitara/guide/images/icon_location.png" alt="位置情報アイコン" style="height: 1.2em; vertical-align: middle;">）</strong> をタップすると、位置検知を手動で ON / OFF できます。旅行中や休日など、一時的に通知を止めたいときにお使いください。</p>
+
+<div class="warning">
+  手動で OFF <img src="../../tsuitara/guide/images/icon_location_off.png" alt="位置情報OFFアイコン" style="height: 1.2em; vertical-align: middle;"> にしている間は、登録場所に近づいても通知は届きません。
+</div>
+
+<h3>タグでの絞り込み</h3>
+
+<p>場所登録時に付けたタグ（例：#買い物、#訪問先）で、表示する場所を絞り込めます。</p>
+
+<div class="step">
+  <h3>使い方</h3>
+  <ol>
+    <li>ホーム画面上部に登録済みのタグがチップとして並びます</li>
+    <li>タグをタップすると、そのタグが付いた場所だけが表示されます</li>
+    <li>複数選択すると <strong>AND（全部含む）/ OR（どれか含む）</strong> を切り替えられます</li>
+    <li>「すべて」をタップで絞り込み解除</li>
+  </ol>
+</div>
+
+<h3>一括で Todo を追加する</h3>
+
+<p>複数の場所に同じ Todo をまとめて追加できます。「すべての訪問先でカタログを配る」「どこかのスーパーで卵を買う」といった使い方ができます。</p>
+
+<div class="step">
+  <h3>追加手順</h3>
+  <ol>
+    <li>タグで絞り込む、または「<strong>すべて</strong>」を選んだままにする</li>
+    <li>表示されるボタンをタップ<br>
+      <span style="color: #666; font-size: 0.9em;">・タグ 1 つ →「「#タグ名」に一括Todoを追加」<br>
+      ・タグ複数 →「表示中の N 件に一括追加」<br>
+      ・絞り込みなし →「すべての場所に一括Todoを追加」</span></li>
+    <li>Todo の内容を入力し、<strong>「個別 Todo」</strong>か <strong>「共通 Todo」</strong>を選択</li>
+    <li>「追加する」で完了</li>
+  </ol>
+</div>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/06b_bulk_add_dialog.png" alt="一括Todo追加ダイアログ">
+  <div class="caption">一括追加ダイアログ（個別 / 共通、時刻指定・定期・定番も選べます）</div>
+</div>
+
+<div class="step">
+  <h3>個別 Todo と共通 Todo の違い</h3>
+  <ul>
+    <li><strong>個別 Todo</strong>：各場所に独立した Todo として追加されます。1 か所で完了しても他には影響しません。<br>
+      <span style="color: #666; font-size: 0.9em;">例：訪問先すべてに「カタログ配布」→ 訪問先ごとに個別に完了させる</span></li>
+    <li><strong>共通 Todo</strong>：どこか 1 か所で完了にすれば、全場所で完了扱いになります。<br>
+      <span style="color: #666; font-size: 0.9em;">例：スーパー各店に「卵を買う」→ どこか 1 店で買えば完了</span></li>
+  </ul>
+</div>
+
+<div class="tip">
+  共通 Todo は「🔗 共通」バッジで見分けられます。タグを削除すると、そのタグで一括追加された Todo も自動的に削除されます。
+</div>
+
+<h2 id="settings">8. 基本設定</h2>
+
+<p>ホーム画面の歯車アイコンから設定画面を開きます。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/10_settings.png" alt="設定画面">
+  <div class="caption">設定画面</div>
+</div>
+
+<h3>カラーテーマ</h3>
+<p>7 種類（マリン／ウォーム／アース／ラブリー／ハッピー／カラフル／モノクロ）から選べます。</p>
+
+<h3>到着通知をする時間帯</h3>
+
+<p>業務時間中だけ動かしたい場合など、特定の時間帯だけ位置検知を有効にできます。時間帯外は自動で停止し、バッテリーを節約します。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/12_schedule.png" alt="時間帯指定">
+  <div class="caption">時間帯指定：9:00〜18:00 の例</div>
+</div>
+
+<div class="warning">
+  この機能には Android の「<strong>正確なアラーム</strong>」権限が必要です。このカードの先頭に許可状況が表示されるので、「✗ 許可されていません」と出ている場合はボタンから許可してください。
+</div>
+
+<h3>到着通知距離</h3>
+
+<p>登録場所から何メートル以内で「到着」とみなすかを、50m〜500m の範囲で設定できます。</p>
+
+<div class="screenshot">
+  <img src="../../tsuitara/guide/images/11_distance.png" alt="到着距離設定">
+  <div class="caption">到着距離は 50m〜500m で調整可能</div>
+</div>
+
+<div class="tip">
+  狭くする（50m）と、より正確に近づいたときだけ通知。広くする（500m）と早めに通知が届きます。車移動が多い方は広めがおすすめです。
+</div>
+
+<h3>近接監視間隔</h3>
+
+<p>登録場所の 500m 以内にいるときの位置確認の間隔を、5 秒／10 秒／30 秒から選べます。車移動が中心の方は 5〜10 秒、徒歩中心の方は 30 秒がおすすめです。</p>
+
+<h3>完了 Todo の自動削除</h3>
+
+<p>完了した Todo を一定時間後に自動で消せます（15 分後〜12 時間後、または削除しない）。定期 Todo は削除ではなく、次回の予定にリセットされます。</p>
+
+<h2 id="backup">9. データの引き継ぎ・バックアップ</h2>
+
+<p>登録した場所・Todo・定番 Todo・各種設定は、ファイルとして書き出して別の端末に引き継げます。</p>
+
+<div class="step">
+  <h3>機種変更の手順</h3>
+  <ol>
+    <li><strong>旧端末</strong>：設定 →「データのバックアップ／復元」→「バックアップを書き出す」</li>
+    <li>保存先を選んでファイルを保存（Google ドライブなどに保存すると受け渡しが簡単です）</li>
+    <li><strong>新端末</strong>：ツイタラをインストールし、設定 →「バックアップから復元する」</li>
+    <li>書き出したファイルを選択</li>
+  </ol>
+</div>
+
+<div class="warning">
+  復元すると、その端末の現在のデータはすべて置き換わります。復元前にご確認ください。
+</div>
+
+<div class="tip">
+  Android の標準バックアップ機能が有効な場合、機種変更時に自動で復元されることもあります。ただし確実に引き継ぐには、上記の書き出し／読み込みをおすすめします。
+</div>
+
+<h2 id="troubleshoot">10. 通知が来ないときは</h2>
+
+<p>到着しても通知が届かない場合、次の順にご確認ください。</p>
+
+<dl class="faq">
+  <dt>1. 位置情報が「常に許可」になっていますか？</dt>
+  <dd>ホーム画面に赤い警告バナーが出ていればタップして設定画面へ。「アプリの使用中のみ許可」では、アプリを閉じている間は検知できません。</dd>
+
+  <dt>2. 通知が許可されていますか？</dt>
+  <dd>こちらも警告バナーが表示されます。タップして通知設定を開き、許可してください。</dd>
+
+  <dt>3. 位置検知が OFF になっていませんか？</dt>
+  <dd>ホーム画面右上の位置情報アイコンをご確認ください。灰色／斜線付きの場合は OFF です。</dd>
+
+  <dt>4. 時間帯指定の範囲外ではありませんか？</dt>
+  <dd>設定で時間帯を指定している場合、その時間外は検知が停止します。</dd>
+
+  <dt>5. その場所に未完了の Todo がありますか？</dt>
+  <dd>ツイタラは<strong>未完了の Todo がある場所でのみ</strong>通知します。Todo が無い場所や、すべて完了済みの場所では通知されません（メモだけでは通知されません）。</dd>
+
+  <dt>6. スマホが長時間静止していませんか？</dt>
+  <dd>動きをきっかけに位置を確認する仕組みのため、完全に静止していると検知が動きません。持ち歩いていれば通常どおり動作します。</dd>
+
+  <dt>7. 登録した座標は正しいですか？</dt>
+  <dd>編集画面の「📍 地図で確認する」で、意図した場所にピンが立つかご確認ください。</dd>
+
+  <dt>8. 電池の最適化が効いていませんか？</dt>
+  <dd>端末の設定で、ツイタラの電池最適化を「制限しない」にすると安定することがあります。</dd>
+</dl>
+
+<div class="tip">
+  屋内では GPS の精度が落ちるため、到着通知距離を広め（200m 程度）に設定すると安定することがあります。
+</div>
+
+<h2 id="contact">11. お問い合わせ</h2>
+
+<p>ツイタラをご利用いただきありがとうございます。ご不明な点・不具合・改善のご要望などありましたら、お気軽にご連絡ください。</p>
+
+<div class="contact">
+  <p><strong>サポートメール</strong></p>
+  <p><a href="mailto:support.doster@gmail.com">support.doster@gmail.com</a></p>
+</div>
+
+<footer>
+  <p>ツイタラ 使い方ガイド © 2026 Doster Studio</p>
+  <p><a href="../../tsuitara/privacy/">プライバシーポリシー</a></p>
+</footer>
+
+</body>
+</html>
