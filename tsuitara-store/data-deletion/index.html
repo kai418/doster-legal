@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ツイタラ データの削除について | Doster Studio</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    color: #333;
+  }
+  h1 { border-bottom: 2px solid #2196f3; padding-bottom: 8px; }
+  h2 { color: #1976d2; margin-top: 32px; }
+  .meta { color: #666; font-size: 0.9em; }
+  a { color: #1976d2; }
+  ul { padding-left: 1.4em; }
+  li { margin: 4px 0; }
+  .highlight {
+    background: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    padding: 16px 20px;
+    margin: 24px 0;
+    border-radius: 4px;
+  }
+  .steps { padding-left: 1.4em; }
+  .steps > li { margin: 14px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.95em; }
+  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+</style>
+</head>
+<body>
+<h1>ツイタラ データの削除について</h1>
+<p class="meta">最終更新: 2026-08-15<br>アプリ名: ツイタラ - 到着で知らせるTodo・タスクリマインダー<br>提供者: Doster Studio</p>
+
+<p>本ページは、Doster Studio が提供する Android アプリ「ツイタラ - 到着で知らせるTodo・タスクリマインダー」（以下「本アプリ」）について、ユーザーご自身のデータを削除する方法をご案内するものです。</p>
+
+<div class="highlight">
+<p style="margin:0"><strong>本アプリのデータは、すべてお使いの端末内に保存されます。</strong>Doster Studio（開発者）がユーザーのデータを受け取ったり、サーバーに保管したりすることは一切ありません。そのため、開発者側に削除を依頼していただく必要はなく、<strong>ユーザーご自身の操作でいつでも完全に削除できます。</strong></p>
+</div>
+
+<h2>データを削除する手順</h2>
+
+<ol class="steps">
+<li>
+<strong>個別に削除する（場所・Todo 単位）</strong><br>
+本アプリを開き、削除したい場所またはTodoを選んで削除操作を行ってください。その場で端末内のデータから消去されます。
+</li>
+<li>
+<strong>アプリ内のデータをすべて削除する</strong><br>
+端末の「設定」→「アプリ」→「ツイタラ」→「ストレージとキャッシュ」→<strong>「ストレージを消去」</strong>（機種により「データを削除」）を実行してください。登録した場所・Todo・設定を含む、本アプリの端末内データがすべて消去されます。
+</li>
+<li>
+<strong>アプリをアンインストールする</strong><br>
+本アプリをアンインストールすると、端末内に保存されたデータはすべて削除されます。
+</li>
+<li>
+<strong>Google アカウントのバックアップを削除する（バックアップ機能をご利用の場合）</strong><br>
+Android 標準の「データのバックアップ」が有効な場合、本アプリのデータがユーザーご自身の Google アカウントのバックアップ領域に保存されていることがあります。これは Google が提供する仕組みで、Doster Studio がアクセスすることはできません。削除するには、端末の「設定」→「Google」→「バックアップ」からバックアップを削除するか、<a href="https://one.google.com/settings" target="_blank" rel="noopener">Google One のバックアップ設定</a>から該当端末のバックアップを削除してください。
+</li>
+</ol>
+
+<h2>削除・保持されるデータの種類と保持期間</h2>
+
+<table>
+<tr><th>データの種類</th><th>保存場所</th><th>保持期間</th><th>削除方法</th></tr>
+<tr>
+<td>登録した場所の情報（名称・住所・緯度経度・タグ・メモ）</td>
+<td>端末内のみ</td>
+<td>ユーザーが削除するまで（開発者側の保持はありません）</td>
+<td>上記の手順 1〜3</td>
+</tr>
+<tr>
+<td>Todo・定期Todo・「定番」などの登録内容</td>
+<td>端末内のみ</td>
+<td>ユーザーが削除するまで（開発者側の保持はありません）</td>
+<td>上記の手順 1〜3</td>
+</tr>
+<tr>
+<td>アプリの設定（通知時間帯・到着とみなす距離・表示設定など）</td>
+<td>端末内のみ</td>
+<td>ユーザーが削除するまで（開発者側の保持はありません）</td>
+<td>上記の手順 2〜3</td>
+</tr>
+<tr>
+<td>位置情報（到着検知のために取得する現在地）</td>
+<td>端末内のメモリ上でのみ処理</td>
+<td><strong>保持しません</strong>（到着判定のためにその場で使用し、保存しません）</td>
+<td>削除操作は不要です</td>
+</tr>
+<tr>
+<td>住所と座標の変換（ジオコーディング）のために Android 標準機能を通じて Google へ送信される住所・座標</td>
+<td>Google のサービス</td>
+<td><strong>Doster Studio は保持しません</strong>（変換結果を受け取るだけで、送信内容を蓄積しません）</td>
+<td>Google 側の取り扱いについては <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google のプライバシーポリシー</a>をご参照ください</td>
+</tr>
+<tr>
+<td>Android 標準バックアップに保存されたアプリデータ</td>
+<td>ユーザーご自身の Google アカウント</td>
+<td>ユーザーが削除するまで（Doster Studio はアクセスできません）</td>
+<td>上記の手順 4</td>
+</tr>
+</table>
+
+<h2>削除に関するお問い合わせ・ご依頼</h2>
+<p>上記のとおり、Doster Studio はユーザーのデータを保持していないため、開発者側で削除する対象はありません。削除手順についてご不明な点がある場合や、データの取り扱いについてご確認・ご依頼がある場合は、以下までご連絡ください。内容を確認のうえ、原則として 14 日以内にご返答いたします。</p>
+<ul>
+<li>提供者：Doster Studio</li>
+<li>連絡先：<a href="mailto:support.doster@gmail.com">support.doster@gmail.com</a></li>
+</ul>
+
+<hr style="margin-top: 40px; border: none; border-top: 1px solid #ddd;">
+<p style="text-align: center; color: #666; font-size: 0.9em; margin-top: 20px;">
+<a href="../privacy/">ツイタラ プライバシーポリシー</a> ｜
+<a href="../guide/">ツイタラ 使い方ガイド</a>
+</p>
+</body>
+</html>
